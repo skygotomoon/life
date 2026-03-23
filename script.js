@@ -7,6 +7,8 @@ const easterEggMessage = document.getElementById('easter-egg-message');
 const hitButton = document.getElementById('hit-button');
 const tennisLayer = document.getElementById('tennis-layer');
 const quoteToast = document.getElementById('quote-toast');
+const memoryPhoto = document.getElementById('memory-photo');
+const photoFrame = document.getElementById('photo-frame');
 const easterEggLines = [
   '别急，你正在成为那个你曾经很羡慕的大人。',
   '你不是从零开始，你是带着经验再次出发。',
@@ -122,4 +124,9 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach((element) => {
   observer.observe(element);
+});
+
+
+memoryPhoto?.addEventListener('error', () => {
+  photoFrame?.classList.add('is-missing');
 });
