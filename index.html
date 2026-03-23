@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的 2025 年度回顾</title>
+    <meta
+      name="description"
+      content="一页式年度回顾网页，包含时间轴、数字年度、未来来信、深色模式和滚动动画。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero section reveal">
+        <nav class="topbar">
+          <div>
+            <p class="eyebrow">ANNUAL REVIEW / 2025</p>
+            <h1>这一年，我把成长做成了可回望的证据。</h1>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换深色模式">
+            <span class="theme-toggle__icon">☼</span>
+            <span class="theme-toggle__text">切换主题</span>
+          </button>
+        </nav>
+
+        <div class="hero-grid">
+          <section>
+            <p class="hero-lead">
+              2025 不是一个“所有愿望都实现”的年份，而是一个我开始更稳定地理解自己、训练自己、也温柔地接住自己的年份。
+            </p>
+            <div class="hero-tags">
+              <span>技术成长</span>
+              <span>独自旅行</span>
+              <span>身体训练</span>
+              <span>重新定义生活节奏</span>
+            </div>
+          </section>
+          <aside class="hero-card floating-card">
+            <p class="hero-card__label">年度关键词</p>
+            <ul>
+              <li>主动选择，而不是被动响应</li>
+              <li>把热爱从情绪变成习惯</li>
+              <li>允许试错，也记录修复</li>
+            </ul>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section intro reveal">
+          <div class="section-heading">
+            <p class="eyebrow">01 / 内容策划</p>
+            <h2>这一年的故事，不止是成就，也包括那些没做好的瞬间。</h2>
+          </div>
+          <div class="intro-grid">
+            <article class="panel">
+              <h3>年度前言</h3>
+              <p>
+                如果要用一句话总结 2025，我会说：这是我学会长期主义的一年。很多事情没有立刻开花，但我开始理解，真正的改变来自重复、耐心和持续地向前走。
+              </p>
+            </article>
+            <article class="panel accent-panel">
+              <h3>隐藏彩蛋</h3>
+              <p>给认真看到这里的未来自己留一句话：你不需要每一次都赢，但要记得每一次都在变强。</p>
+              <button id="easter-egg" class="ghost-button" type="button">点我领取一句悄悄话</button>
+              <p id="easter-egg-message" class="easter-egg-message" aria-live="polite"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="timeline">
+          <div class="section-heading">
+            <p class="eyebrow">02 / 时间轴</p>
+            <h2>五个让我真正记住 2025 的瞬间。</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-date">03 月</div>
+              <div class="timeline-card">
+                <span class="timeline-badge">重新开始</span>
+                <h3>给生活做了一次彻底的减法</h3>
+                <p>
+                  我开始认真清理那些消耗注意力的事：无效社交、随手打开的信息流、对自己过高却不现实的期待。减法没有让我失去什么，反而让我第一次看见，自己真正想投入的东西到底是什么。
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">05 月</div>
+              <div class="timeline-card">
+                <span class="timeline-badge">突破</span>
+                <h3>完成一个让我骄傲的技术项目</h3>
+                <p>
+                  那不是最宏大的作品，却是我第一次真正把复杂问题拆开、理解、落地并交付。它提醒我：成长不是突然变强，而是愿意把困难留在桌面上，直到自己能把它做完。
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">07 月</div>
+              <div class="timeline-card">
+                <span class="timeline-badge">远行</span>
+                <h3>一次独自旅行，让我学会与自己相处</h3>
+                <p>
+                  在陌生的城市里走路、看日落、临时决定下一站，我没有因为“一个人”而感到空缺，反而第一次体验到完整。原来真正的自由，是不需要等待别人同意也能出发。
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">09 月</div>
+              <div class="timeline-card">
+                <span class="timeline-badge">失败清单</span>
+                <h3>把搞砸的事写下来，也写下学到的教训</h3>
+                <p>
+                  我终于不再只收藏高光时刻，也开始记录拖延、判断失误和关系里表达不足的瞬间。那些并不光彩的页面，反而组成了 2025 最诚实的部分：我开始愿意直视自己的局限。
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">12 月</div>
+              <div class="timeline-card">
+                <span class="timeline-badge">落点</span>
+                <h3>不再执着于“立刻成为更好的人”</h3>
+                <p>
+                  到了年末，我忽然没有那么着急了。我知道自己还在路上，也知道很多事情还没达到理想状态。但这份不急不躁，本身就是这一年最珍贵的进步：我在变好，也终于允许它慢慢发生。
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="stats">
+          <div class="section-heading">
+            <p class="eyebrow">03 / 数字年度</p>
+            <h2>用一些数字，把抽象的成长具象化。</h2>
+            <p class="section-copy">如果说这一年像一份个人实验报告，那下面这些数字大概就是“阶段性成果与意外误差”。</p>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><strong>126</strong><span>杯咖啡，支撑了无数个专注时段</span></article>
+            <article class="stat-card"><strong>214</strong><span>次代码提交，把想法推进成结果</span></article>
+            <article class="stat-card"><strong>18</strong><span>本读完的书，帮我校准表达和判断</span></article>
+            <article class="stat-card"><strong>97</strong><span>小时运动，证明自律也能长出快乐</span></article>
+            <article class="stat-card"><strong>6</strong><span>次短途出走，每一次都像给生活刷新缓存</span></article>
+            <article class="stat-card"><strong>42</strong><span>次深夜散步，把情绪留给风处理</span></article>
+            <article class="stat-card"><strong>11</strong><span>次明确说“不”，节省了大量能量</span></article>
+            <article class="stat-card"><strong>3</strong><span>个重要项目，从模糊变得清晰可交付</span></article>
+            <article class="stat-card"><strong>29</strong><span>天完全断开社交媒体，注意力明显回升</span></article>
+            <article class="stat-card"><strong>1</strong><span>个更稳定的自己，是全年最佳产出</span></article>
+          </div>
+        </section>
+
+        <section class="section letter-section reveal" id="letter">
+          <div class="section-heading">
+            <p class="eyebrow">04 / 致未来的信</p>
+            <h2>致 2026 年的自己</h2>
+          </div>
+          <article class="letter-card">
+            <p>
+              希望你在 2026 年，仍然保有出发的勇气，也拥有停下来整理自己的耐心。愿你继续去做那些短期看不到回报、却真正塑造你的事：认真工作，诚实表达，坚持训练，温柔生活。如果前路依旧不够明朗，也别急着怀疑自己。你已经用 2025 证明了，真正可靠的，不是一时热血，而是脚踏实地地向前走。
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
