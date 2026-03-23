@@ -1,29 +1,33 @@
 :root {
-  color-scheme: light;
-  --bg: #f6f1eb;
-  --bg-soft: rgba(255, 255, 255, 0.58);
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: rgba(255, 255, 255, 0.9);
-  --text: #2d2a26;
-  --muted: #6f665f;
-  --accent: #9f7b6a;
-  --accent-strong: #7d5f52;
-  --line: rgba(125, 95, 82, 0.18);
-  --shadow: 0 20px 45px rgba(74, 58, 49, 0.12);
+  color-scheme: dark;
+  --bg: #081d17;
+  --bg-soft: rgba(10, 34, 27, 0.82);
+  --surface: rgba(16, 46, 38, 0.88);
+  --surface-strong: rgba(19, 62, 51, 0.96);
+  --text: #f3f7f2;
+  --muted: #c5d6ce;
+  --accent: #e66711;
+  --accent-strong: #ff8d3a;
+  --secondary-accent: #2d5da1;
+  --court-line: rgba(240, 248, 242, 0.18);
+  --line: rgba(255, 141, 58, 0.22);
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
 }
 
 body.dark {
   color-scheme: dark;
-  --bg: #1f1d1b;
-  --bg-soft: rgba(42, 39, 36, 0.75);
-  --surface: rgba(48, 45, 41, 0.8);
-  --surface-strong: rgba(56, 53, 49, 0.94);
-  --text: #f4eee8;
-  --muted: #c7bdb4;
-  --accent: #d9aa8f;
-  --accent-strong: #f0c8b4;
-  --line: rgba(217, 170, 143, 0.22);
-  --shadow: 0 20px 45px rgba(0, 0, 0, 0.32);
+  --bg: #041611;
+  --bg-soft: rgba(6, 28, 22, 0.88);
+  --surface: rgba(12, 39, 31, 0.92);
+  --surface-strong: rgba(15, 51, 42, 0.98);
+  --text: #f7faf7;
+  --muted: #d5e0da;
+  --accent: #e66711;
+  --accent-strong: #ff9d57;
+  --secondary-accent: #5b8fe0;
+  --court-line: rgba(250, 255, 252, 0.22);
+  --line: rgba(255, 157, 87, 0.24);
+  --shadow: 0 24px 50px rgba(0, 0, 0, 0.46);
 }
 
 * {
@@ -39,8 +43,8 @@ body {
   min-height: 100vh;
   font-family: 'Inter', system-ui, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(159, 123, 106, 0.18), transparent 35%),
-    radial-gradient(circle at right center, rgba(125, 95, 82, 0.14), transparent 30%),
+    radial-gradient(circle at top left, rgba(230, 103, 17, 0.2), transparent 32%),
+    radial-gradient(circle at right center, rgba(45, 93, 161, 0.22), transparent 28%),
     var(--bg);
   color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
@@ -51,7 +55,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
   opacity: 0.22;
@@ -91,7 +95,32 @@ button {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-top: 24px;
+  background: linear-gradient(135deg, rgba(27, 77, 62, 0.88), rgba(8, 29, 23, 0.95));
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 2px solid var(--court-line);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--court-line), var(--court-line)) center/2px calc(100% - 92px) no-repeat,
+    linear-gradient(var(--court-line), var(--court-line)) center 88px/58% 2px no-repeat,
+    linear-gradient(var(--court-line), var(--court-line)) center calc(100% - 88px)/58% 2px no-repeat,
+    linear-gradient(90deg, var(--court-line), var(--court-line)) center/58% 2px no-repeat;
+  opacity: 0.9;
 }
 
 .topbar {
@@ -108,6 +137,7 @@ button {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent-strong);
+  text-shadow: 0 0 18px rgba(230, 103, 17, 0.18);
 }
 
 h1 {
@@ -180,7 +210,7 @@ h1 {
   gap: 14px;
   padding: 14px 18px;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, rgba(230, 103, 17, 0.18), rgba(45, 93, 161, 0.18));
 }
 
 .preview-window__dots {
@@ -192,8 +222,8 @@ h1 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.72;
+  background: linear-gradient(135deg, var(--accent), var(--secondary-accent));
+  opacity: 0.9;
 }
 
 .preview-window__url {
@@ -234,6 +264,7 @@ h1 {
   color: var(--accent-strong);
   font-size: 0.88rem;
   font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(45, 93, 161, 0.28);
 }
 
 .preview-window__grid {
@@ -365,7 +396,7 @@ h1 {
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 8px rgba(159, 123, 106, 0.12);
+  box-shadow: 0 0 0 8px rgba(230, 103, 17, 0.12);
 }
 
 .timeline-card h3 {
