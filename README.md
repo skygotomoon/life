@@ -37,10 +37,10 @@ chmod +x start.sh
 你现在只需要：
 
 1. 把仓库推到 GitHub。
-2. 确保默认发布分支是 `main`。
+2. 当前仓库分支如果是 `work` 也可以直接部署；如果你使用 `main`，同样支持。
 3. 在 GitHub 仓库页面进入 **Settings → Pages**。
 4. 在 **Build and deployment** 里选择 **GitHub Actions**。
-5. Push 到 `main` 后，GitHub 会自动部署这个静态站点。
+5. Push 到 `work` 或 `main` 后，GitHub 会自动部署这个静态站点。
 
 部署成功后，公开链接通常会是：
 
