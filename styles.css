@@ -447,7 +447,7 @@ h1 {
   gap: 18px;
 }
 
-.photo-placeholder-card {
+.photo-slot-card {
   display: grid;
   gap: 14px;
   padding: 18px;
@@ -456,19 +456,38 @@ h1 {
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
 }
 
-.photo-placeholder-box {
-  display: grid;
-  place-items: center;
+.photo-slot-media-wrap {
+  position: relative;
   min-height: 220px;
-  padding: 20px;
   border-radius: 20px;
   border: 1px dashed rgba(255, 217, 143, 0.28);
   background:
     linear-gradient(135deg, rgba(126, 165, 216, 0.08), rgba(213, 164, 76, 0.08)),
     rgba(14, 20, 27, 0.72);
+  overflow: hidden;
+}
+
+.photo-slot-media {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-slot-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
   color: var(--accent-strong);
   text-align: center;
   font-weight: 600;
+}
+
+.photo-slot-card.has-image .photo-slot-fallback {
+  display: none;
 }
 
 .learning-life__summary {

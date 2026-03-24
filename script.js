@@ -49,3 +49,24 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach((element) => {
   observer.observe(element);
 });
+
+
+const photoSlots = [
+  ['slot-t1', 'slot-t1-card'],
+  ['slot-t2', 'slot-t2-card'],
+  ['slot-t3', 'slot-t3-card'],
+];
+
+photoSlots.forEach(([imgId, cardId]) => {
+  const img = document.getElementById(imgId);
+  const card = document.getElementById(cardId);
+  if (!img || !card) return;
+
+  img.addEventListener('load', () => {
+    card.classList.add('has-image');
+  });
+
+  img.addEventListener('error', () => {
+    card.classList.remove('has-image');
+  });
+});
