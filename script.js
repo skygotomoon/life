@@ -52,6 +52,7 @@ document.querySelectorAll('.reveal').forEach((element) => {
 
 
 const photoSlots = [
+  ['hero-t3', 'hero-t3-card'],
   ['slot-t1', 'slot-t1-card'],
   ['slot-t2', 'slot-t2-card'],
   ['slot-t3', 'slot-t3-card'],
